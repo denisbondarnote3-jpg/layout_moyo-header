@@ -1,28 +1,27 @@
 body {
   margin: 0;
+
+  font-family: Roboto, sans-serif;
 }
 
 :root {
   --blue: #00acdc;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .header {
   background: #fff;
   border-bottom: 1px solid #e5e5e5;
+  box-sizing: border-box; /* Додаємо локально замість * */
 }
 
 .header__container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 50px;
+  box-sizing: border-box; /* Додаємо локально */
 
   display: flex;
   align-items: center;
-  height: 60px;
 }
 
 .logo {
@@ -47,7 +46,8 @@ body {
 }
 
 .nav__item {
-  margin-right: 24px;
+  /* Відступи між пунктами робимо тільки тут (Пункт 4 зауважень) */
+  margin-right: 28px;
 }
 
 .nav__item:last-child {
@@ -56,21 +56,22 @@ body {
 
 .nav__link {
   position: relative;
-
   display: flex;
   align-items: center;
   justify-content: center;
 
+  /* Висота хедера задається тут (Пункт 3 зауважень) */
   height: 60px;
 
-  font-size: 12px; /* ❗ не 120 */
-  font-weight: 700; /* жирніше як в оригіналі */
-  letter-spacing: 0.04em; /* як у MOYO */
+  font-size: 12px;
+  font-weight: 500; /* Змінено з 700 на 500 (Пункт 1 зауважень) */
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-
-  padding: 0 14px; /* зсуває текст вправо */
   text-decoration: none;
   color: #000;
+
+  /* Прібрано padding (Пункт 4 зауважень) */
+  padding: 0;
 }
 
 .nav__link:hover {
