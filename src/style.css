@@ -1,7 +1,6 @@
 body {
   margin: 0;
-
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
 }
 
 :root {
@@ -11,14 +10,12 @@ body {
 .header {
   background: #fff;
   border-bottom: 1px solid #e5e5e5;
-  box-sizing: border-box; /* Додаємо локально замість * */
 }
 
 .header__container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 50px;
-  box-sizing: border-box; /* Додаємо локально */
 
   display: flex;
   align-items: center;
@@ -46,7 +43,6 @@ body {
 }
 
 .nav__item {
-  /* Відступи між пунктами робимо тільки тут (Пункт 4 зауважень) */
   margin-right: 28px;
 }
 
@@ -56,22 +52,20 @@ body {
 
 .nav__link {
   position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
 
-  /* Висота хедера задається тут (Пункт 3 зауважень) */
   height: 60px;
 
   font-size: 12px;
-  font-weight: 500; /* Змінено з 700 на 500 (Пункт 1 зауважень) */
+  font-weight: 500;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+
   text-decoration: none;
   color: #000;
-
-  /* Прібрано padding (Пункт 4 зауважень) */
-  padding: 0;
 }
 
 .nav__link:hover {
